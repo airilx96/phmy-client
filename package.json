@@ -1,6 +1,6 @@
 {
-    "name": "phmy-browser",
-    "productName": "PeaceHotelMY",
+    "name": "peacehotel-browser",
+    "productName": "Peace Hotel MY",
     "version": "0.0.1",
     "description": "Runs the Peace Hotel MY client with Adobe Flash Player",
     "main": "src/index.js",
@@ -14,7 +14,7 @@
     },
     "keywords": [],
     "author": {
-        "name": "PeaceHotelMY",
+        "name": "Peace Hotel MY",
         "email": "admin@peacehotel.my"
     },
     "license": "MIT",

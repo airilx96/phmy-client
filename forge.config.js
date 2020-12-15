@@ -2,15 +2,15 @@ module.exports = {
     packagerConfig: {
         icon: 'icons/peakrp',
         protocols: [{
-            name: 'phmy-protocol',
-            schemes: 'phmyweb',
+            name: 'peacehotel-protocol',
+            schemes: 'peacehotel',
         }, ],
         appCategoryType: 'public.app-category.games',
     },
     makers: [{
             name: '@electron-forge/maker-squirrel',
             config: {
-                iconUrl: 'https://peakrp.com/img/browser-icons/peakrp.ico',
+                iconUrl: 'https://imgur.com/q3MBwUQ.png',
                 setupIcon: 'icons/setup.ico',
                 loadingGif: 'icons/setup-splash.gif',
             },
