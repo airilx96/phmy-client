@@ -17,9 +17,7 @@ module.exports = {
         },
         {
             name: '@electron-forge/maker-dmg',
-            config: {
-                format: "ULFO",
-            },
+            config: {},
         },
         {
             name: '@electron-forge/maker-zip',
