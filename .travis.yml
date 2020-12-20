@@ -9,6 +9,7 @@ cache:                      # Speed up builds by caching things
 script:
 - echo "skipping tests"
 before_install:
+  - npm i -g macos-alias    # requirement to build dmg
   - npm i -g npm            # Specify version of npm
   - npm --version           # See what the running version of npm is
 before_deploy:              # Run these before attempting to deploy
