@@ -1,6 +1,6 @@
 module.exports = {
     packagerConfig: {
-        icon: 'icons/peakrp',
+        icon: 'icons/peacehotel',
         protocols: [{
             name: 'peacehotel-protocol',
             schemes: 'peacehotel',
