@@ -4,7 +4,7 @@ platform:                           # Platforms to test/build on
   - x86                             # Build for 32bit
   - x64                             # Also build and test 64bit
 environment:
-  nodejs_version: "8"               # Test against the latest version of this Node.js version
+  nodejs_version: "10"               # Test against the latest version of this Node.js version
 install:                            # Install scripts. (runs after repo cloning)
   - ps: Install-Product node $env:nodejs_version # Get the latest stable version of Node.js or io.js
   - npm install                     # install modules
