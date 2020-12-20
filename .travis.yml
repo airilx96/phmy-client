@@ -6,6 +6,8 @@ os:                         # Simultaneous environments
 cache:                      # Speed up builds by caching things
   directories:              # Add directories relative to root
   - node_modules            # cache node modules to save 1-3 minutes
+script:
+- echo "skipping tests"
 before_install:
   - npm i -g npm            # Specify version of npm
   - npm --version           # See what the running version of npm is
