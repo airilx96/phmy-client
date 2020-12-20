@@ -26,3 +26,12 @@ deploy:                     # Configuration for releases
   #  tags: true              # We only create a release on tags
   api_key:                  # Github personal access token encrypted with travis encrypt command
    secure: GH_TOKEN
+  on:
+    branch: dev
+
+# only run this script on pull requests and merges into 
+# the 'master' and 'prod' branches
+branches:
+  only:
+  - master
+  - dev
