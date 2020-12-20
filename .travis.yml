@@ -13,7 +13,7 @@ before_install:
   - npm --version           # See what the running version of npm is
 before_deploy:              # Run these before attempting to deploy
 #  - npm install -g electron-forge@3.0.5 # Install electron-forge, may move to dev-dependencies in package.json
-  - electron-forge make-mac     # Command that builds the app for the architecture
+  - npm run make-mac     # Command that builds the app for the architecture
 deploy:                     # Configuration for releases
   provider: releases
   file_glob: true           # Set the mode for file to use *
