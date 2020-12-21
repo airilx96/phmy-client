@@ -1,0 +1,38 @@
+language: node_js           # Set language for the environment
+node_js: node               # Use latest version of node.js
+os:                         # Simultaneous environments
+#  - linux                   # Linux - for testing and future builds
+  - osx                     # Mac - for testing and builds
+cache:                      # Speed up builds by caching things
+  directories:              # Add directories relative to root
+  - node_modules            # cache node modules to save 1-3 minutes
+script:
+- echo "skipping tests"
+before_install:
+  - npm i -g macos-alias    # requirement to build dmg
+  - npm i -g npm            # Specify version of npm
+  - npm --version           # See what the running version of npm is
+before_deploy:              # Run these before attempting to deploy
+#  - npm install -g electron-forge@3.0.5 # Install electron-forge, may move to dev-dependencies in package.json
+  - npm run make-mac     # Command that builds the app for the architecture
+deploy:                     # Configuration for releases
+  provider: releases
+  file_glob: true           # Set the mode for file to use *
+  file: out/make/*          # Upload all files generated during make/build
+  overwrite: true           # Overwrite the file if it exists
+  skip_cleanup: true        # Don't wait to cleanup
+  prerelease: true          # Don't make this the latest release, mark it as prerelease
+  draft: true               # Don't publish this to the public, make it a draft
+  #on:                       # Tell it when to deploy/release
+  #  tags: true              # We only create a release on tags
+  api_key:                  # Github personal access token encrypted with travis encrypt command
+   secure: GH_TOKEN
+  on:
+    branch: dev
+
+# only run this script on pull requests and merges into 
+# the 'master' and 'prod' branches
+branches:
+  only:
+  - master
+  - dev
