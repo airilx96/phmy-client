@@ -9,12 +9,13 @@ const getToggleBlurryFixLabel = () => {
 const createMenu = () => {
     return Menu.buildFromTemplate([{
             label: 'Peace Hotel',
-            submenu: [{
-                    label: 'Reload',
-                    click: (menuItem, browserWindow) => {
-                        browserWindow.reload();
-                    },
-                },
+            submenu: [
+                /* {
+                                    label: 'Reload',
+                                    click: (menuItem, browserWindow) => {
+                                        browserWindow.reload();
+                                    },
+                                }, */
                 {
                     label: 'Clear cache',
                     click: async() => {
@@ -45,7 +46,7 @@ const createMenu = () => {
                 },
             }, ],
         },
-        {
+        /* {
             label: 'Development',
             submenu: [{
                 label: 'Open DevTools',
@@ -53,7 +54,7 @@ const createMenu = () => {
                     browserWindow.webContents.openDevTools();
                 },
             }, ],
-        },
+        }, */
     ]);
 };
 
