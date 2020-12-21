@@ -44,7 +44,7 @@ if (settings.get('enableBlurryClientFix')) {
 initFlash();
 initMenu();
 
-const CLIENT_URL = 'http://peacecms.test/hotel/browser?sessid=';
+const CLIENT_URL = 'https://www.peacehotel.my/hotel/browser?sessid=';
 
 const launchGame = (browserWindow) => {
     if (token === '') {
@@ -61,7 +61,7 @@ const createWindow = async() => {
     const mainWindow = new BrowserWindow({
         width: 1300,
         height: 800,
-        icon: path.join(__dirname, 'icons/peakrp.ico'), // TODO: Support a mac icon
+        icon: path.join(__dirname, 'icons/peacehotel.ico'), // TODO: Support a mac icon
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             contextIsolation: true,
@@ -89,14 +89,14 @@ const createWindow = async() => {
 
         // Handle FindRetros voting redirect
         if (
-            url.startsWith('http://peacecms.test/client') &&
+            url.startsWith('https://www.peacehotel.my/client') &&
             !url.startsWith(CLIENT_URL)
         ) {
             launchGame(mainWindow);
             return;
         }
 
-        if (url.startsWith('http://peacecms.test/client/error')) {
+        if (url.startsWith('https://www.peacehotel.my/client/error')) {
             loadLocalPage(mainWindow, 'disconnected-page');
             return;
         }
@@ -117,7 +117,7 @@ const createWindow = async() => {
     }
 
     const versionResponse = await fetch(
-        'http://peacecms.test/browserVersionCheck.php',
+        'https://www.peacehotel.my/browserVersionCheck.php',
     );
     const version = await versionResponse.json();
 
@@ -130,7 +130,7 @@ const createWindow = async() => {
         });
 
         if (buttonIndexClicked === 0) {
-            shell.openExternal('http://peacecms.test/browser');
+            shell.openExternal('https://www.peacehotel.my/browser');
         }
     }
 };
