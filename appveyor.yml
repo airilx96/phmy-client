@@ -30,6 +30,6 @@ deploy:                             # Deploy settings
   prerelease: true                  # Prerelease so it's not latest
   auth_token:                       # provide the github personal access token in appveyor settings and view the export yml
     secure: NCIucl/zS+I4892Ni+yyZeBIzJRU/4HEnbEwwdjN+ih9P1ii3szn4cMYTVmUkO2H
-  on:                               # Requirements for when deploy is triggered
+#  on:                               # Requirements for when deploy is triggered
 #    branch: dev                     # release from master branch only
 #    appveyor_repo_tag: true         # deploy on tag push only
