@@ -17,7 +17,7 @@ test_script:
   - npm --version
   #- npm test                       # run tests
 after_test:                         # run build after tests
-  - npm run make-win                    # Script to package/compile
+  - npm run make-win                # Script to package/compile
 artifacts:                          # Add artifacts to upload
   - path: 'out\make\**\*.exe'       # upload all exe files in ./out/make
     name: exe                       # name to be used in deploy

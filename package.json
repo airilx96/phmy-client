@@ -1,7 +1,7 @@
 {
     "name": "peacehotel-client",
     "productName": "Peace Hotel Client",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Runs the Peace Hotel Client with Adobe Flash Player",
     "main": "src/index.js",
     "scripts": {
