@@ -124,7 +124,7 @@ const createWindow = async() => {
     if (app.getVersion() !== version) {
         const { response: buttonIndexClicked } = await dialog.showMessageBox({
             type: 'warning',
-            message: 'Your browser version is out of date, please update',
+            message: 'Your client app version is out of date, please update',
             buttons: ['Click here to visit Browser Page'],
             cancelId: -1,
         });
