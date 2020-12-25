@@ -22,8 +22,8 @@ artifacts:                          # Add artifacts to upload
   - path: 'out\make\**\*.exe'       # upload all exe files in ./out/make
     name: exe                       # name to be used in deploy
 deploy:                             # Deploy settings
-  release: '0.0.5'  # Use the tag name
-  description: 'Peace Hotel Client Apps'  # Placeholder for prepopulating release description
+  release: '0.1.0'  # Use the tag name
+  description: 'Peace Hotel Client App'  # Placeholder for prepopulating release description
   provider: GitHub                  # Release to Github
   artifacts: exe                    # Release the exe from named artifacts
   draft: true                       # Draft release so it's not public
