@@ -1,8 +1,8 @@
 {
     "name": "peacehotel-clientapp",
     "productName": "Peace Hotel Client App",
-    "version": "0.1.1",
-    "description": "Runs the Peace Hotel Client with Adobe Flash Player",
+    "version": "0.2.0",
+    "description": "Peace Hotel Client App with Integrated Adobe Flash Player",
     "main": "src/index.js",
     "scripts": {
         "start": "electron-forge start",
