@@ -1,7 +1,7 @@
 {
     "name": "peacehotel-clientapp",
     "productName": "Peace Hotel Client App",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Peace Hotel Client App with Integrated Adobe Flash Player",
     "main": "src/index.js",
     "scripts": {
